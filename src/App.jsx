@@ -1,12 +1,17 @@
+import { BrowserRouter } from "react-router-dom";
 import Button from "./components/button/Button";
 import { GlobalStyles } from "./styles/GlobalStyles";
+import Router from "./lib/router/Router";
+import SayHello from "./components/say-hello/SayHello";
 
 const App = () => {
   return (
     <>
-      <GlobalStyles />
-      <h1>Template React</h1>
-      <Button />
+      <BrowserRouter>
+        <GlobalStyles />
+        <SayHello />
+        <Router />
+      </BrowserRouter>
     </>
   );
 };
